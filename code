@@ -1,0 +1,31 @@
+using System;
+using System.Windows.Forms;
+
+namespace SimpleInterestCalculator
+{
+    public partial class SimpleInterestForm : Form
+    {
+        public SimpleInterestForm()
+        {
+            InitializeComponent();
+        }
+
+        private void calculateButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                double principal = double.Parse(principalTextBox.Text);
+                double rate = double.Parse(rateTextBox.Text);
+                double time = double.Parse(timeTextBox.Text);
+
+                double interest = (principal * rate * time) / 100;
+
+                resultLabel.Text = $"Simple Interest: {interest:C}";
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("Please enter valid numeric values.");
+            }
+        }
+    }
+}
