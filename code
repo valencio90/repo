@@ -17,10 +17,12 @@ namespace SimpleInterestCalculator
                 double principal = double.Parse(principalTextBox.Text);
                 double rate = double.Parse(rateTextBox.Text);
                 double time = double.Parse(timeTextBox.Text);
+                double amount = double.Parse(amountTextBox.Text);
 
                 double interest = (principal * rate * time) / 100;
+                double totalAmount = principal + interest;
 
-                resultLabel.Text = $"Simple Interest: {interest:C}";
+                resultLabel.Text = $"Simple Interest: {interest:C}\nTotal Amount: {totalAmount:C}";
             }
             catch (FormatException)
             {
