@@ -59,7 +59,8 @@ public class Banking {
             System.out.print("How much money do you want to withdraw:");
             withdraw = input.nextInt();
             initialBalance = initialBalance - withdraw;
-            System.out.print("Withdrawn " + withdraw);
+            System.out.print("Withdrawn " + withdraw+"\n");
+            System.out.println("initial amount after withdrawing "+initialBalance+"\n");
         }
     }
 
@@ -70,6 +71,7 @@ public class Banking {
      */
     public void depositAmount(int deposit) {
         initialBalance += deposit;
-        System.out.print(deposit + " deposited\n");
+        System.out.println(deposit + " deposited\n");
+        System.out.println("initial amount after depositing "+initialBalance+"\n");
     }
 }

@@ -25,6 +25,7 @@ public class Bank {
         b1.displayAccountDetails();
         b1.depositAmount(1000);
         b1.withdrawAmount();
+        b1.depositAmount(5000);
 
         // Create an instance of the SimpleInterestCalculator class
         SimpleInterestCalculator s1 = new SimpleInterestCalculator(1000, 5, 3);
